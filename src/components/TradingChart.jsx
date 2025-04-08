@@ -3,7 +3,7 @@ import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } f
 
 const TradingChart = ({ marketData, shortPeriod, longPeriod }) => {
   const sortedData = Object.keys(marketData)
-    .sort((a, b) => new Date(a) - new Date(b))
+    .sort()
     .map(timestamp => ({
       time: timestamp,
       close: parseFloat(marketData[timestamp]["4. close"]),

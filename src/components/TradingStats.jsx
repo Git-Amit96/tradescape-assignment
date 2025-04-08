@@ -38,9 +38,6 @@ const TradingStats = ({ companyName, shortPeriod, longPeriod, marketData, signal
   const shortMA = useMemo(() => calculateMovingAverage(sortedData, shortPeriod), [sortedData, shortPeriod]);
   const longMA = useMemo(() => calculateMovingAverage(sortedData, longPeriod), [sortedData, longPeriod]);
 
-
- 
- 
   const shortMAPct = currentPrice > 0 ? ((shortMA - currentPrice) / currentPrice) * 100 : 0;
   const longMAPct = currentPrice > 0 ? ((longMA - currentPrice) / currentPrice) * 100 : 0;
 

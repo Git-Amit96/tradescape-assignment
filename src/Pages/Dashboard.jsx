@@ -32,7 +32,7 @@ const Dashboard = () => {
         const FetchMarketData = async () => {
             try {
                 const response = await fetch(
-                    `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo`
+                    `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${symbol}&interval=5min&apikey=${api_key}`
                 );
                 const json = await response.json();
 
